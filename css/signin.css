@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+} 
+.header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: rgb(0, 76, 139);
+    color: white;
+    padding-left: 10rem;
+}
+.logo {
+    background: #2B92A0;
+    width: 25%;
+    height: 400px;
+    padding: 4rem 4rem;
+    margin-left: 8rem;
+}
+.logo img {
+    margin: 2rem 6rem;
+}
+.logo h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: -2rem 5.2rem;
+}
+.formholder {
+    background: rgb(3, 3, 59);
+    padding: 4rem 4rem;
+    height: 400px;
+    width: 25%;   
+}
+.formholder form {
+    background: white;
+    padding: 1rem 2rem;
+    height: 280px;
+    border-radius: 10px;
+}
+.formholder form div {
+    padding: 5px 0px;
+    position: relative;
+}
+.formholder form span {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+#username {
+    width: 250px;
+    height: 35px;
+    padding-left: 1rem;
+    margin-bottom: 10px;
+    border: 1px ;
+    border-radius: 6px;
+    margin-top: 1rem;
+    background: rgb(233, 228, 228);
+}
+#password {
+    width: 250px;
+    height: 35px;
+    padding-left: 1rem; 
+    margin-bottom: 5px;
+    border: 1px ;
+    border-radius: 6px;
+    background: rgb(233, 228, 228);
+}
+.formholder form a {
+    font-size: 10px;
+    color: blue;
+    text-transform: capitalize;
+}
+.formholder form button, .registerform form button {
+    position: relative;
+    width: 265px;
+    height: 40px;
+    margin: 8px 0px;
+    color: white;
+    background: rgba(49, 91, 206, 0.836);
+    border-radius: 6px solid  rgba(49, 91, 206, 0.836);
+}
+.formholder h3, .registerform h3 {
+    font-size: 14px;
+    margin: 1rem 2.5rem;
+    width: 240px;
+    text-align: center;
+}
+

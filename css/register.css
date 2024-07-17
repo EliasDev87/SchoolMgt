@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.register {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: rgb(4, 81, 95);
+    color: white;
+    padding-left: 8rem;
+}
+.registers {
+    background: rgb(4, 170, 170);
+    width: 25%;
+    height: 400px;
+    padding: 4rem 4rem;
+    margin-left: 8rem;   
+}
+.registers img {
+    margin: 2rem 6rem;
+}
+.registers h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin: -2rem 5.2rem;
+}
+.registerform {
+    background: darkblue;
+    padding: 4rem 4rem;
+    height: 400px;
+    width: 25%;
+}
+.registerform form div {
+    padding: 5px 0px;
+    position: relative;
+}
+.registerform form span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.registerform form {
+    background: white;
+    padding: 1rem 2rem;
+    height: 280px;
+    border-radius: 10px;
+}
+#select, #name, #conpassword, #password {
+    width: 250px;
+    height: 35px;
+    padding-left: 1rem;
+    margin-bottom: 10px;
+    border: 1px;
+    border-radius: 6px;
+    background: rgb(233, 228, 228);
+    position: relative;
+}
+#form2 div svg {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    left: 15em;
+    cursor: pointer;
+}
+.link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    left: 10em;
+    background: rgb(215, 198, 198);
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+}
+.link a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    border-bottom: 3px solid white;
+}
+.link a:last-child {
+    border-bottom: none;
+}
+.link a:hover {
+    background: rgb(66, 66, 197);
+}
+/* .input:focus {
+    outline: 0;
+}
+.input.success {
+    border-color: greenyellow;
+} */
+.registerform button {
+    width: 267px;
+    height: 35px;
+    color: white;
+    background: rgba(49, 91, 206, 0.836);
+    border-radius: 6px;
+}
+.registerform h3 {
+    font-size: 14px;
+    margin: 1rem 2.5rem;
+    width: 240px;
+    text-align: center;
+}

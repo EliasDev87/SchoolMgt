@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    <div class="register">
+        <div class="registers">
+            <img src="./images/WhatsApp Image 2021-06-04 at 13.37 2.svg" alt="">
+            <h2>Welcome</h2>
+        </div>
+        <div class="registerform">
+            <form action="text" id="form2">
+                <div>
+                    <select name="" id="select">
+                        <option value="Select">Select</option>
+                        <option value="Student">Student</option>
+                        <option value="Academic">Academic</option>
+                        <option value="Non academic">Non academic</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <span id="error"></span>
+                </div>
+                <div>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <span id="password-error"></span>
+                </div>
+                <div>
+                    <input type="password" id="conpassword" placeholder="confirm your password">
+                    <span id="confirm-password"></span>
+                </div>
+                
+                <button type="submit">Register Here</button>
+            </form>
+            <h3>School Management Sytem for THE ABC COLLEGE</h3>
+        </div>
+    </div>
+
+
+    <script>
+             
+
+
+        const select = document.getElementById("select");
+        const select_error = document.getElementById("select-error");
+        const fname = document.getElementById("name");
+        const password = document.getElementById("password");
+        const conpassword = document.getElementById("conpassword");
+        const error = document.getElementById("error");
+        const form2 = document.getElementById("form2");
+        const password_error = document.getElementById("password-error");
+        const confirm_password = document.getElementById("confirm-password");
+        const label = document.getElementById("label");
+
+
+
+        form2.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValidate = true;
+
+            if(fname.value == '' || fname.value === null){
+                error.innerHTML = 'Name is required';
+                error.styel.fontSize = "10px";
+                error.style.color = 'red';
+                isValidate = false;
+            }
+
+            if (password.value === ''|| password.value === null){
+                password_error.innerHTML = "Password is required";
+                password_error.style.fontSize = "10px";
+                password_error.style.color = "red";
+                isValidate = false;
+            } 
+            if (password.value === "password"){
+                password_error.innerHTML = "Password cannot be password";
+                password_error.style.fontSize = "10px";
+                password_error.style.color = "red";
+                isValidate = false;
+            }
+            if (conpassword.value === ''|| conpassword.value == null){
+                confirm_password.innerHTML = "Confirm your password";
+                confirm_password.style.fontSize = "10px";
+                confirm_password.style.color = "red";
+                isValidate = false;
+
+            }  
+            if (conpassword.value !== password.value ) {
+                confirm_password.innerHTML = "Password does not match";
+                confirm_password.style.fontSize = "10px";
+                confirm_password.style.color = "red";
+                isValidate = false;
+
+            }
+            if(isValidate) {
+                localStorage.setItem("fname", fname.value);
+                localStorage.setItem("password", password.value);
+                window.location.href = "./signin.html";
+            }
+    }) 
+    </script>
+</body>
+</html>

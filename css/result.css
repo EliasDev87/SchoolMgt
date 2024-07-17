@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background: #0E91F0;
+}
+.menu {
+    background: #072F7C;
+    width: 25%;
+}
+.menu div {
+    /* width: 70px; */
+    background: #DC7374;
+    padding-right: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    height: 80px;
+}
+.menu div img {
+    margin: 1rem;
+    width: 70px;
+    height: 50px;
+
+}
+.menu ul li {
+    list-style: none;
+    margin-top: 1rem;
+}
+.menu ul li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    margin-top: 10px;
+    color: #ffff;
+}
+#heading {
+    display: flex;
+    gap: 2rem;
+    font-size: 9px;
+    background: #9DB1F7;
+    padding-left: 1rem;
+}
+#heading h1 {
+    margin: 1.6rem;
+}
+.examprofile {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.resultholder {
+    display: flex;
+    gap: 4rem;
+}
+.resultholder img {
+    width: 120px;
+    margin-top: -24rem;
+    margin-left: 2rem;
+}
+.result {
+    width: 720px;
+    height: 520px;
+    background: #CDF3F5;
+    margin: 2rem;
+}
+.result ul {
+    display: flex;
+    flex-direction: row;
+}
+.result ul li {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    font-size: 13px;
+}
+.result ul li span {
+    list-style: none;
+    display: flex;
+    padding-right: 1rem;
+    margin-left: 5px;
+    margin-right: -5px;
+}

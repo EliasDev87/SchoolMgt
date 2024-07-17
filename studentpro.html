@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="./css/studentpro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="studentprofile">
+        <div class="sidebar" id="menubtn">
+            <div class="logo">
+                <img src="./images/WhatsApp Image 2021-06-04 at 13.37 2.svg" alt="" id="batch">
+                <img src="./images/Group 185.png" alt="" id="menu" class="closebtn" onclick="toggleSideBar()">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <img src="./images/av_timer.png" alt="">
+                            <a href="dashboard.html">Dashboard</a>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon1()">
+                            <img src="./images/students 1.png" alt="">
+                            <button>Students</button>
+                            <div class="content">
+                                <a href="studentpro.html">Student Profile</a>
+                                <a href="examresult.html">Exam Results</a>
+                                <a href="timetable.html">Time Table</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon2()" >
+                            <img src="./images/people.png" alt="">
+                            <button>Academic Staff</button>
+                            <div class="content" id="content2">
+                                <a href="teacherspro.html">Teachers Profile</a>
+                                <a href="yearschedule.html">Year Schedule</a>
+                                <a href="studentmarks.html">Students Mark</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon3()">
+                            <img src="./images/Vector (1).png" alt="">
+                            <button>Non-Academic Staff</button>
+                            <div class="content" id="content3">
+                                <a href="nonacademicpro.html">Non Academic Profile</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon4()">
+                            <img src="./images/Vector (4).png" alt="">
+                            <button>Parents</button>
+                            <div class="content" id="content4">
+                                <a href="parentspro.html">Parents Profile</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon5()">
+                            <img src="./images/Vector (3).png" alt="">
+                            <button>Admin</button>
+                            <div class="content" id="content5">
+                                <a href="studentdeets.html">Students</a>
+                                <a href="staffdeets.html">Academic Staff</a>
+                                <a href="nonacademicdeets.html">Non Academic</a>
+                                <a href="parentsdeet.html">Parents</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="profile">
+            <div class="header">
+                <img src="./images/Group 185.png" alt="" id="menus" onclick="toggleSideBar()">
+                <h2>Student Profile</h2>
+            </div>
+            <div class="profilemenu">
+                <div class="profileimg">
+                    <img src="./images/Ellipse 12.png" alt="">
+                    <a href="examresult.html" id="results">Exam Results</a> <br>
+                    <button onclick="location.href='http://127.0.0.1:5500/timetable.html'">Time Table</button>
+                </div>
+                <table id="studentDetails">
+                    <tr>
+                        <td>Name:</td>
+                        <td id="studentFname"></td>
+                    </tr>
+                    <tr>
+                        <td>Admission number:</td>
+                        <td id="admissionNum"></td>
+                    </tr>
+                    <tr>
+                        <td>Grade:</td>
+                        <td id="grade"></td>
+                    </tr>
+                    <tr>
+                        <td>Class:</td>
+                        <td id="classdeet"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td id="genderfield"></td>
+                    </tr>
+                    <tr>
+                        <td>Religion:</td>
+                        <td id="relfield"></td>
+                    </tr>
+                    <tr>
+                        <td>Admission Date:</td>
+                        <td type="date" id="admissiondatefield"></td>
+                    </tr>
+                    <tr>
+                        <td>Father's Name:</td>
+                        <td id="fatherfield"></td>
+                    </tr>
+                    <tr>
+                        <td>Father's Occupation:</td>
+                        <td id="fatheroccufield"></td>
+                    </tr>
+                    <tr>
+                        <td>Mother's Name:</td>
+                        <td id="motherfield"></td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+    <script>
+
+        let sidebar = document.querySelector('.sidebar');
+        let menubtn = document.getElementById('menubtn');
+        let closebtn = document.querySelector('.closebtn');
+
+        function toggleSideBar(){
+            var menubtn = document.getElementById('menubtn');
+            sidebar.classList.toggle("active");
+            sidebar.style.left("0");
+            console.log("sidebar")
+        }
+
+
+        function toggleCon1() {
+            var content = document.querySelector(".content");
+            content.classList.toggle("active");
+        }
+        function toggleCon2() {
+            var content2 = document.getElementById("content2");
+            content2.classList.toggle("active");
+        }
+        function toggleCon3() {
+            var content3 = document.getElementById("content3");
+            content3.classList.toggle("active");
+        }
+        function toggleCon4() {
+            var content4 = document.getElementById("content4");
+            content4.classList.toggle("active");
+        }
+        function toggleCon5() {
+            var content5 = document.getElementById("content5");
+            content5.classList.toggle("active");
+        }
+
+        document.getElementById('studentFname').innerHTML = localStorage.getItem('firstname', studentLogin[0]);
+        document.getElementById('admissionNum').innerHTML = localStorage.getItem('adnumber', studentLogin[1]);
+        document.getElementById('grade').innerHTML = localStorage.getItem('gradefield', studentLogin[2]);
+        document.getElementById('classdeet').innerHTML = localStorage.getItem('classfield', studentLogin[3]);
+        document.getElementById('dob').innerHTML = localStorage.getItem('dobField', studentLogin[4]);
+        document.getElementById('genderfield').innerHTML = localStorage.getItem('sex', studentLogin[5]);
+        document.getElementById('relfield').innerHTML = localStorage.getItem('religiondeet', studentLogin[6]);
+        document.getAnimations('admissiondatefield').innerHTML = localStorage.getItem('asdate', studentLogin[7]);
+        document.getElementById('fatherfield').innerHTML = localStorage.getItem('father', studentLogin[8]);
+        document.getElementById('fatheroccufield').innerHTML = localStorage.getItem('occupation', studentLogin[9]);
+        document.getElementById('motherfield').innerHTML = localStorage.getItem('mother', studentLogin[10]);
+
+    </script>
+
+
+        
+</body>
+</html>

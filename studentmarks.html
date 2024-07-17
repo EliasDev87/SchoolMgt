@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student’s Marks</title>
+    <link rel="stylesheet" href="./css/studentmarks.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="menubtn">
+            <div class="logo">
+                <img src="./images/WhatsApp Image 2021-06-04 at 13.37 2.svg" alt="" id="batch">
+                <img src="./images/Group 185.png" alt="" id="menu" class="closebtn" onclick="toggleSideBar()">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <img src="./images/av_timer.png" alt="">
+                            <a href="dashboard.html">Dashboard</a>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon1()">
+                            <img src="./images/students 1.png" alt="">
+                            <button>Students</button>
+                            <div class="content">
+                                <a href="studentpro.html">Student Profile</a>
+                                <a href="examresult.html">Exam Results</a>
+                                <a href="timetable.html">Time Table</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon2()" >
+                            <img src="./images/people.png" alt="">
+                            <button>Academic Staff</button>
+                            <div class="content" id="content2">
+                                <a href="teacherspro.html">Teachers Profile</a>
+                                <a href="yearschedule.html">Year Schedule</a>
+                                <a href="studentmarks.html">Students Mark</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon3()">
+                            <img src="./images/Vector (1).png" alt="">
+                            <button>Non-Academic Staff</button>
+                            <div class="content" id="content3">
+                                <a href="nonacademicpro.html">Non Academic Profile</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon4()">
+                            <img src="./images/Vector (4).png" alt="">
+                            <button>Parents</button>
+                            <div class="content" id="content4">
+                                <a href="parentspro.html">Parents Profile</a>
+                            </div>
+                        </div>
+                        <div class="dropdown" onclick="toggleCon5()">
+                            <img src="./images/Vector (3).png" alt="">
+                            <button>Admin</button>
+                            <div class="content" id="content5">
+                                <a href="studentdeets.html">Students</a>
+                                <a href="staffdeets.html">Academic Staff</a>
+                                <a href="nonacademicdeets.html">Non Academic</a>
+                                <a href="parentsdeet.html">Parents</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="profilecon">
+          <div class="header">
+            <img src="./images/Group 185.png" alt="" id="menus" onclick="toggleSideBar()">
+            <h1>Teacher Profile</h1>
+            <img src="./images/arrow_circle_right.svg" alt="">
+            <h2>Year Schedule</h2>
+            <img id="eye" src="./images/eye.png" alt="">
+          </div> 
+          <div class="profile">
+            <img src="./images/teacherphoto.svg" alt="" width="100px">
+            <div class="maincontent">
+                <form action="form" id="form">
+                    <label for="index">Index Number</label>
+                    <input type="text" placeholder="Enter your Student’s Index Number">
+                </form>
+                <form action="form2" id="form2">
+                    <div>
+                        <span>Enter Subject</span>
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>Enter Marks</span>
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                </form>
+            </div>
+            <div class="btn">
+                <button>Add New Row</button>
+                <button>Add Student’s Marks</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        let sidebar = document.querySelector('.sidebar');
+        let menubtn = document.getElementById('menubtn');
+        let closebtn = document.querySelector('.closebtn');
+
+        function toggleSideBar(){
+            var menubtn = document.getElementById('menubtn');
+            sidebar.classList.toggle("active");
+            sidebar.style.left("0");
+            console.log("sidebar")
+        }
+
+
+        function toggleCon1() {
+            var content = document.querySelector(".content");
+            content.classList.toggle("active");
+        }
+        function toggleCon2() {
+            var content2 = document.getElementById("content2");
+            content2.classList.toggle("active");
+        }
+        function toggleCon3() {
+            var content3 = document.getElementById("content3");
+            content3.classList.toggle("active");
+        }
+        function toggleCon4() {
+            var content4 = document.getElementById("content4");
+            content4.classList.toggle("active");
+        }
+        function toggleCon5() {
+            var content5 = document.getElementById("content5");
+            content5.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

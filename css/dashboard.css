@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+}
+.dashboard {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.maindash {
+    background: #0E91F0;
+    width: 100%;
+}
+#menus {
+    position: absolute;
+    left: 0;
+    margin-left: 1.5rem;
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 99;
+    margin-top: 1rem;
+}
+.maindash h1 {
+    background: #9DB1F7;
+    padding: 1.5rem;
+    margin-top: -8px;  
+    font-size: 25px; 
+    position: absolute;
+    width: 1032px;
+    padding-left: 25rem;
+}
+.hero {
+    height: 100vh;
+    margin-top: 7rem;
+    margin-left: 22rem;
+}
+.herocon {
+    background: white;
+    margin: 8rem 4rem;
+}
+.herocon h2 {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.img {
+    margin-left: 9rem;
+}
+.img img:nth-child(1) {
+    width: 220px;
+}
+.img img:nth-child(2) {
+    width: 350px;
+    margin-left: 5rem;
+}
+.text {
+    padding: 1rem;
+    text-align: center;
+    margin-left: 5rem;
+}
+.text h3 {
+    font-size: 20px;
+}
+.text p {
+    width: 750px;
+    margin: 1rem 2rem;
+}
+.sidebar {
+    background: #072F7C;
+    width: 350px;
+    height: 100vh;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 9999;
+    margin-bottom: -2rem;
+    left: -350px;
+    transition: 0.8s ease-in-out;
+    transition-property: left;
+}
+.sidebar.active {
+    display: block;
+    width: 350px;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    background:  #DC7374;
+    padding: 0.5rem;
+    height: 50px;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin-top: 1rem;
+}
+#menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 32px;
+    cursor: pointer;
+}
+#batch {
+    left: 0;
+    margin-top: -0.3rem;
+    margin-left: 1rem;
+}
+.menu ul {
+    display: flex;
+    padding: 2rem;
+}
+.menu li {
+    list-style: none;
+}
+.menu .dropdown {
+    margin-bottom: 1.5rem;
+    padding-left: 6rem;
+    margin-left: -3rem;
+    padding-right: 2rem;
+    margin-right: -8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid blue;
+    
+}
+.menu img {
+    margin-bottom: -.4rem;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #ffff;
+    margin-left: .7rem;
+    font-size: 20px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    display: none;
+    position: relative;
+}
+.content.active {
+    display: flex;
+}
+.content a {
+    padding: 1rem;
+}
+.dropdown button {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+}
